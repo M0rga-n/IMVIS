@@ -3,6 +3,7 @@
 #include <opencv2/videoio.hpp>  // Nodig om camera te kunnen gebruiken
 #include "Histogram.h"
 #include "Mirror.h"
+#include "invert.hpp"
 #include <iostream>
 #include <string>
 
@@ -147,6 +148,37 @@ int lab1_opdracht1a_beeld_spiegelen() { // 1. Spiegelen
 }
 
 int lab1_opdracht1b_grijswaarden_inverteren() { // 2. Zwart en wit tinten inverteren
+    Mat src, dst;
+
+    String source_window = "Originele plaatje";         // Mag je weglaten, alleen imshow("naam",src) is voldoende. Dit maakt het mooier.
+    String destination_window = "Plaatje geinverteerd"; 
+
+    /* Hieronder: plaatje inlezen met imread(). De paden moet er zo uitzien: "C://mijnMap//subMap//bestand.pgm"
+    Vergeet de optie IMREAD_GRAYSCALE niet als je een grijswaardenplaatje inleest.
+    Met IMREAD_GRAYSCALE krijg je 1 byte per pixel, als je het vergeet krijg je 3 bytes per pixel en dan zie je maar 1/3 van je bronplaatje terug!! */
+
+    printf(" ++ ");
+    src = imread(binroot+"image1.pgm", IMREAD_GRAYSCALE);  // plaatje zit in project directory, zie Solution Explorer, is toegevoegd via Shift+Alt+A (Add Existing Item)
+    printf(" ++ ");
+    namedWindow(source_window, WINDOW_AUTOSIZE); // Mag je weglaten, alleen imshow("naam",src) is voldoende.
+    imshow(source_window, src); // Originele plaatje laten zien.
+    int HEIGHT = src.rows;
+    int WIDTH = src.cols;
+    int temp = 0;
+
+    dst = Mat::ones(HEIGHT, WIDTH, CV_8U) * 0;   // Maak een nieuw plaatje van hetzelfde type als src, gevuld met 1 * 0 (dus nullen, dus zwart)
+
+    Invert invert(src, dst);
+    invert.process();
+
+    namedWindow(destination_window, WINDOW_AUTOSIZE); // Mag je weglaten, alleen imshow("naam",src) is voldoende.
+    imshow(destination_window, dst); // Bestemmingsplaatje laten zien.
+
+    // Plaatjes netjes positioneren (mag je weglaten, alleen imshow() is voldoende)
+    moveWindow(source_window, 0, 0); // Plaatje naar linksboven verplaatsen
+    moveWindow(destination_window, WIDTH, 0); // Plaatje rechts naast de andere plaatsen
+
+    waitKey(0); // Wachten tot een toets gedrukt wordt...
     return 0;
 }
 

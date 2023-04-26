@@ -12,6 +12,7 @@ set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 add_executable(IMVIS 
   code/h-nse-imvis.cpp
   code/Histogram.cpp
-  code/Mirror.cpp)
+  code/Mirror.cpp
+  code/invert.cpp)
 
 target_link_libraries( IMVIS ${OpenCV_LIBS} )

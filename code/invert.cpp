@@ -1,0 +1,25 @@
+#include "invert.hpp"
+using namespace cv;
+using namespace std;
+
+Invert::Invert(Mat& src, Mat& dst) {
+    this->src = src;
+    this->dst = dst;
+    HEIGHT = src.rows;
+    WIDTH = src.cols;
+}
+
+void Invert::process(void){
+	int h, w, temp = 0;
+    for (h = 0; h < HEIGHT; h++) {
+        for (w = 0; w < WIDTH; w++) {
+
+            temp = src.at<uchar>(h, w);
+            //temp = *src.ptr(h, w); // hetzelfde als hierboven, maar op een andere manier.
+            temp = 255 - temp;
+
+            dst.at<uchar>(h, w) = temp;
+            //*dst.ptr(HEIGHT - h - 1, w) = temp; // hetzelfde als hierboven, maar op een andere manier.
+        }
+    }
+}

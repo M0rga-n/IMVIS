@@ -1,7 +1,7 @@
-CMakeFiles/IMVIS.dir/code/h-nse-imvis.cpp.o: \
- /home/morgan/opdrachten/IMVIS/code/h-nse-imvis.cpp \
- /usr/include/stdc-predef.h \
- /home/morgan/opdrachten/IMVIS/code/Parameters.h \
+CMakeFiles/IMVIS.dir/code/invert.cpp.o: \
+ /home/morgan/opdrachten/IMVIS/code/invert.cpp /usr/include/stdc-predef.h \
+ /home/morgan/opdrachten/IMVIS/code/invert.hpp \
+ /usr/include/opencv4/opencv2/highgui/highgui.hpp \
  /usr/include/opencv4/opencv2/highgui.hpp \
  /usr/include/opencv4/opencv2/core.hpp \
  /usr/include/opencv4/opencv2/core/cvdef.h \
@@ -246,11 +246,6 @@ CMakeFiles/IMVIS.dir/code/h-nse-imvis.cpp.o: \
  /usr/include/opencv4/opencv2/core/cvdef.h \
  /usr/include/opencv4/opencv2/imgcodecs.hpp \
  /usr/include/opencv4/opencv2/videoio.hpp \
- /home/morgan/opdrachten/IMVIS/code/Histogram.h \
- /usr/include/opencv4/opencv2/highgui/highgui.hpp \
  /usr/include/opencv4/opencv2/imgproc/imgproc.hpp \
  /usr/include/opencv4/opencv2/imgproc.hpp \
- /usr/include/opencv4/opencv2/imgproc/segmentation.hpp \
- /usr/include/c++/12.2.1/iostream \
- /home/morgan/opdrachten/IMVIS/code/Mirror.h \
- /home/morgan/opdrachten/IMVIS/code/invert.hpp
+ /usr/include/opencv4/opencv2/imgproc/segmentation.hpp

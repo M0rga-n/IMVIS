@@ -201,6 +201,30 @@ code/h-nse-imvis.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMVIS.dir/build.make CMakeFiles/IMVIS.dir/code/h-nse-imvis.cpp.s
 .PHONY : code/h-nse-imvis.cpp.s
 
+code/invert.o: code/invert.cpp.o
+.PHONY : code/invert.o
+
+# target to build an object file
+code/invert.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMVIS.dir/build.make CMakeFiles/IMVIS.dir/code/invert.cpp.o
+.PHONY : code/invert.cpp.o
+
+code/invert.i: code/invert.cpp.i
+.PHONY : code/invert.i
+
+# target to preprocess a source file
+code/invert.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMVIS.dir/build.make CMakeFiles/IMVIS.dir/code/invert.cpp.i
+.PHONY : code/invert.cpp.i
+
+code/invert.s: code/invert.cpp.s
+.PHONY : code/invert.s
+
+# target to generate assembly for a file
+code/invert.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/IMVIS.dir/build.make CMakeFiles/IMVIS.dir/code/invert.cpp.s
+.PHONY : code/invert.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -219,6 +243,9 @@ help:
 	@echo "... code/h-nse-imvis.o"
 	@echo "... code/h-nse-imvis.i"
 	@echo "... code/h-nse-imvis.s"
+	@echo "... code/invert.o"
+	@echo "... code/invert.i"
+	@echo "... code/invert.s"
 .PHONY : help
 
 
