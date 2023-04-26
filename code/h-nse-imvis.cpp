@@ -9,7 +9,7 @@
 using namespace cv;
 using namespace std;
 
-const string binroot = "/home/tony/Documents/H-NSE-IMVIS/bin/";
+const string binroot = "/home/morgan/opdrachten/IMVIS/bin/";
 
 // Hieronder (na de demo's) per opdracht een functie, zie de main() onderaan voor de indeling.
 
