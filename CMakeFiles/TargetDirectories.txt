@@ -1,0 +1,3 @@
+/home/morgan/opdrachten/IMVIS/CMakeFiles/IMVIS.dir
+/home/morgan/opdrachten/IMVIS/CMakeFiles/edit_cache.dir
+/home/morgan/opdrachten/IMVIS/CMakeFiles/rebuild_cache.dir
